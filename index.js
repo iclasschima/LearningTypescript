@@ -3,7 +3,7 @@ var User;
     User["USERNAME"] = "iclasschima";
     User["PASSWORD"] = "iclasschima123";
 })(User || (User = {}));
-var loginUser = function (username, password) {
+var loginUser = function (username, password, plaform) {
     if (username == User.USERNAME && password == User.PASSWORD) {
         var user = {
             first_name: "iclass",
@@ -11,7 +11,8 @@ var loginUser = function (username, password) {
             email: "iclasschima@gmail.com",
             username: "iclasschima",
             balance: 3000,
-            hobbies: ["gaming"]
+            hobbies: ["gaming"],
+            current_platform: plaform
         };
         return user;
     }
@@ -21,5 +22,5 @@ var loginUser = function (username, password) {
         };
     }
 };
-var result = loginUser("iclasschima", "iclasschima123");
+var result = loginUser("iclasschima", "iclasschima123", "mobile");
 console.log(result);

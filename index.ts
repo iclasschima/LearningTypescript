@@ -3,7 +3,9 @@ enum User {
     PASSWORD = "iclasschima123"
 }
 
-const loginUser = (username: string, password: any) : {} => {
+type combine = "web" | "mobile"
+
+const loginUser = (username: string, password: any, plaform: combine) : {} => {
     if (username == User.USERNAME && password == User.PASSWORD) {
         const user = {
             first_name: "iclass",
@@ -11,7 +13,8 @@ const loginUser = (username: string, password: any) : {} => {
             email: "iclasschima@gmail.com",
             username: "iclasschima",
             balance: 3000,
-            hobbies: ["gaming"]
+            hobbies: ["gaming"],
+            current_platform: plaform
         }
         return user;
     } else {
@@ -21,6 +24,6 @@ const loginUser = (username: string, password: any) : {} => {
     }
 }
 
-const result: {} = loginUser("iclasschima", "iclasschima123")
+const result: {} = loginUser("iclasschima", "iclasschima123", "mobile")
 
 console.log(result)
