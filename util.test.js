@@ -1,5 +1,6 @@
 const loginUser = require("./index")
 const User = require("./class")
+const Vehicle = require("./interface")
 
 const name = loginUser("iclasschima", "iclaschima123", "web")
 
@@ -13,7 +14,7 @@ test('test fo null', () => {
      expect(s).toBeUndefined()
 })
 
-const iclass = new User()
+const iclass = new User.Admin()
 
 test('should be null', () => {
     iclass.age = 12
@@ -22,3 +23,9 @@ test('should be null', () => {
 
     expect(iclass.age).toBe(12)
 })
+
+
+const benz = new Vehicle.Car()
+
+benz.move()
+benz.break()

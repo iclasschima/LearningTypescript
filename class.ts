@@ -16,4 +16,21 @@ class User {
     }
 }
 
-module.exports = User;
+class Admin extends User {
+
+    deleteUser() {
+        console.log("User have been deleted!")
+    }
+}
+
+class Agent extends User{
+    
+    requestLoan() {
+        console.log("I need loan")
+    }
+}
+
+module.exports = {
+    Agent,
+    Admin
+} 
