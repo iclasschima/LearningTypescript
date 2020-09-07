@@ -1,4 +1,4 @@
-enum User {
+enum Login {
     USERNAME= "iclasschima",
     PASSWORD = "iclasschima123"
 }
@@ -6,7 +6,7 @@ enum User {
 type combine = "web" | "mobile"
 
 const loginUser = (username: string, password: any, plaform: combine) : {} => {
-    if (username == User.USERNAME && password == User.PASSWORD) {
+    if (username == Login.USERNAME && password == Login.PASSWORD) {
         const user = {
             first_name: "iclass",
             last_name: "chima",

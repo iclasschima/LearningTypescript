@@ -1,11 +1,11 @@
 "use strict";
-var User;
-(function (User) {
-    User["USERNAME"] = "iclasschima";
-    User["PASSWORD"] = "iclasschima123";
-})(User || (User = {}));
+var Login;
+(function (Login) {
+    Login["USERNAME"] = "iclasschima";
+    Login["PASSWORD"] = "iclasschima123";
+})(Login || (Login = {}));
 const loginUser = (username, password, plaform) => {
-    if (username == User.USERNAME && password == User.PASSWORD) {
+    if (username == Login.USERNAME && password == Login.PASSWORD) {
         const user = {
             first_name: "iclass",
             last_name: "chima",
