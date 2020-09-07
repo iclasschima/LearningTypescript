@@ -14,7 +14,8 @@ const loginUser = (username: string, password: any, plaform: combine) : {} => {
             username: "iclasschima",
             balance: 3000,
             hobbies: ["gaming"],
-            current_platform: plaform
+            current_platform: plaform,
+            message: "logged in successfully"
         }
         return user;
     } else {
@@ -24,6 +25,4 @@ const loginUser = (username: string, password: any, plaform: combine) : {} => {
     }
 }
 
-const result: {} = loginUser("iclasschima", "iclasschima123", "mobile")
-
-console.log(result)
+module.exports = loginUser;

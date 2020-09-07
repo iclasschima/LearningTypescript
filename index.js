@@ -1,18 +1,20 @@
+"use strict";
 var User;
 (function (User) {
     User["USERNAME"] = "iclasschima";
     User["PASSWORD"] = "iclasschima123";
 })(User || (User = {}));
-var loginUser = function (username, password, plaform) {
+const loginUser = (username, password, plaform) => {
     if (username == User.USERNAME && password == User.PASSWORD) {
-        var user = {
+        const user = {
             first_name: "iclass",
             last_name: "chima",
             email: "iclasschima@gmail.com",
             username: "iclasschima",
             balance: 3000,
             hobbies: ["gaming"],
-            current_platform: plaform
+            current_platform: plaform,
+            message: "logged in successfully"
         };
         return user;
     }
@@ -22,5 +24,4 @@ var loginUser = function (username, password, plaform) {
         };
     }
 };
-var result = loginUser("iclasschima", "iclasschima123", "mobile");
-console.log(result);
+module.exports = loginUser;
